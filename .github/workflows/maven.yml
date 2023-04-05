@@ -51,10 +51,10 @@ jobs:
     - name: Build via Maven
       run: mvn verify -B package --file pom.xml -DdisableXmlReport=true
     - name: 上传文件
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v2
 
       with:
 
         name: 生成的文件
 
-        path: ${{ github.workspace }}/target/
+        path: ${{ github.workspace }}/target/mcMMO.jar
