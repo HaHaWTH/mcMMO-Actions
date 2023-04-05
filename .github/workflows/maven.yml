@@ -24,7 +24,7 @@ on:
 jobs:
   compile:
     name: Maven compiler
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
 
     # 1. Check out the current working tree
@@ -49,7 +49,7 @@ jobs:
 
     # 4. Build via Maven 
     - name: Build via Maven
-      run: mvn verify -B --file pom.xml -DdisableXmlReport=true
+      run: mvn verify -B package --file pom.xml -DdisableXmlReport=true
     - name: 上传文件
       uses: actions/upload-artifact@v1
 
@@ -57,4 +57,4 @@ jobs:
 
         name: 生成的文件
 
-        path: ${{ github.workspace }}/build/libs/
+        path: ${{ github.workspace }}/target/
