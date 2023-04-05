@@ -1,6 +1,6 @@
 # mcMMO
 ## The #1 RPG Mod for Minecraft
-
+自动构建，请前往Actions下载
 ## Website
 I'm working on a brand new website for mcMMO
 
