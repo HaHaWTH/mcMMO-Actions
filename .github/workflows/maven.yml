@@ -24,7 +24,7 @@ on:
 jobs:
   compile:
     name: Maven compiler
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
 
     # 1. Check out the current working tree
